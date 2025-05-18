@@ -1,0 +1,28 @@
+uvicorn main:app --host 127.0.0.1 --port 8000
+✅ Solusi: Hapus dan Buat Ulang venv dari Nol
+🔹 1. Hapus folder venv lama
+bash
+Salin
+Edit
+rm -rf venv
+🔹 2. Buat ulang virtual environment
+bash
+Salin
+Edit
+python3 -m venv venv
+🔹 3. Aktifkan environment
+bash
+Salin
+Edit
+source venv/bin/activate
+🔹 4. Install semua dependency
+bash
+Salin
+Edit
+pip install fastapi uvicorn python-multipart
+Setelah semua selesai, jalankan server:
+
+bash
+Salin
+Edit
+uvicorn main:app --host 127.0.0.1 --port 8000
