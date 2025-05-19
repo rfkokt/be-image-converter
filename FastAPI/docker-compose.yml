@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  fastapi:
+    container_name: fastapi-app
+    image: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG}
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
